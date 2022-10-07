@@ -1,0 +1,16 @@
+<?php
+echo "HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f HHHH fd fdsaf f fdsa ffdfsafd f ";
+/**
+ * @var \VendorDave\ModelsBasics1\Block\Basics1 $block
+ */
+foreach ($block->getModelBasics() as $item) :
+?>
+    <p>
+        <?= $item->getItem() . " || " . $item->getDescription() ?>
+    </p>
+<?php
+endforeach;
+?>
+
+
+hola hola
