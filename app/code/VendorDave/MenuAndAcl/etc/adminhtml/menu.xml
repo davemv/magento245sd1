@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="VendorDave_MenuAndAcl::menu1" title="VendorDave" translate="title" module="VendorDave_MenuAndAcl" sortOrder="900" action="cms/page" resource="VendorDave_MenuAcl1::id1"/>
+    </menu>
+</config>
