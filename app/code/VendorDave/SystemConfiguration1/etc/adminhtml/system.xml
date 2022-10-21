@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendordave" translate="label" sortOrder="1000">
+            <label>Vendor Dave</label>
+        </tab>
+        <section id="vendordavesection" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>VendorDav</label>
+            <tab>vendordave</tab>
+            <resource>VendorDave_SystemConfiguration1::id1</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Learning to use configs</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="expression" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Express</label>                    
+                </field>
+                <field id="select_example" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Example</label>
+                    <source_model>VendorDave\SystemConfiguration1\Model\Config\SourceExample1</source_model>
+                </field>
+            </group>
+        </section>       
+    </system>
+</config>
