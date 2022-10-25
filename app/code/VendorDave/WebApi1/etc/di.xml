@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="VendorDave\WebApi1\Api\Data\WebApi1Interface" type ="VendorDave\WebApi1\Model\WebApi1" />
+    <preference for="VendorDave\WebApi1\Api\WebApi1RepositoryInterface" type ="VendorDave\WebApi1\Model\WebApi1Repository" />
+</config>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+    <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Customer Group Service-->
+    <route url="/V1/webapi1" method="GET">
+        <service class="VendorDave\WebApi1\Api\WebApi1RepositoryInterface" method="getList"/>
+        <resources>
+            <!-- <resource ref="VendorDave_WebApi1::id1"/> -->
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
