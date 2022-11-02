@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This component is used for rendering grids-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <!--uiComponent file name <dot> di.xml item name-->
+            <item name="provider" xsi:type="string">gridrendering1_gridrendering1_grid.gridrendering1_gridrendering1_grid_data_source</item>
+            <item name="deps" xsi:type="string">gridrendering1_gridrendering1_grid.gridrendering1_gridrendering1_grid_data_source</item>
+        </item>
+        <item name="spinner" xsi:type="string">gridrendering1_gridrendering1_columns</item>
+    </argument>
+    <dataSource name="gridrendering1_gridrendering1_grid_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>            
+            <argument name="name" xsi:type="string">gridrendering1_gridrendering1_grid_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="update_url" xsi:type="url" path="mui/index/render" />
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/provider</item>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="indexField" xsi:type="string">id</item>
+                    </item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <bookmark name="bookmarks" /> <!-- to change position of columns and save the state-->
+        <columnsControls name="columns_controls" /> <!-- display or hide columns-->
+        <exportButton name="export_button" /> <!-- for exporting -->
+        <filterSearch name="fulltext" />
+        <filters name="listing_filters" />
+        <paging name="listing_paging" />
+    </listingToolbar>
+    <columns name="gridrendering1_gridrendering1_columns"> <!-- value for item name=spinner (line 10)-->
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="childDefaults" xsi:type="array">
+                    <item name="fieldAction" xsi:type="array">
+                        <item name="provider" xsi:type="string">gridrendering1_gridrendering1_grid.gridrendering1_gridrendering1_grid.gridrendering1_gridrendering1_columns</item>
+                        <item name="target" xsi:type="string">applyAction</item>
+                        <item name="params" xsi:type="array">
+                            <item name="0" xsi:type="string">view</item>
+                            <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                        </item>
+                    </item>
+                </item>
+            </item>
+        </argument>
+        <!-- will appear on grid as checkboxes, required for example for mass actions -->
+        <selectionsColumn name="ids">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="indexField" xsi:type="string">id</item>
+                </item>
+            </argument>
+        </selectionsColumn>
+        <column name="item">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Item</item>
+                </item>
+            </argument>
+        </column>
+        <column name="description">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Description</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>
