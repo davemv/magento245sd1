@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+      <add 
+        id="VendorDave_AdminPageEx1::greetings" 
+        title="Greetings" 
+        translate="title" 
+        module="VendorDave_AdminPageEx1" 
+        parent="Magento_Backend::content" 
+        sortOrder="50" 
+        dependsOnModule="VendorDave_AdminPageEx1" 
+        resource="VendorDave_AdminPageEx1::greetings"/>
+      <add 
+        id="VendorDave_AdminPageEx1::greetings_helloworld" 
+        title="Hello World" 
+        translate="title" 
+        module="VendorDave_AdminPageEx1" 
+        parent="VendorDave_AdminPageEx1::greetings" 
+        sortOrder="10" 
+        dependsOnModule="VendorDave_AdminPageEx1" 
+        action="adminpagesex1fn/helloworld" 
+        resource="VendorDave_AdminPageEx1::greetings"/>
+    </menu>
+</config>
