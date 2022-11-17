@@ -1,0 +1,49 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendordavedynamicconfig1" translate="label" sortOrder="1000">
+            <label>DynamicConfig1</label>
+        </tab>
+        <section id="dynamicrowsystemconfig1" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>DynamicRowConfig</label>
+            <tab>vendordavedynamicconfig1</tab>
+            <resource>VendorDave_DynamicRowSystemConfig1::acl1</resource>
+            <group id="quantity_ranges" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Quantity Ranges</label>
+                <field id="ranges" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ranges</label>
+                    <frontend_model>VendorDave\DynamicRowSystemConfig1\Block\Adminhtml\Form\Field\Ranges</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+
+        <!-- The following section is just to test how to create a new section, not useful on this module -->
+        <section id="dynamicrowsystemconfig2" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>DynamicRowConfig2</label>
+            <tab>vendordavedynamicconfig1</tab>
+            <resource>VendorDave_DynamicRowSystemConfig1::acl1</resource>
+            <group id="idgroup1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Just for testing purposes</label>
+                <field id="expression" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Does nothing, just to test another section</label>                    
+                </field>
+            </group>
+        </section>
+
+
+
+        <!-- para agregar en una seccion previamente creada-->
+        <!-- 
+        <section id="vendordavesection" type="text">           
+            <group id="quantity_ranges" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Quantity Ranges</label>
+                <field id="ranges" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ranges</label>
+                    <frontend_model>VendorDave\DynamicRowSystemConfig1\Block\Adminhtml\Form\Field\Ranges</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                </field>
+            </group>
+        </section>
+         -->
+    </system>
+</config>
